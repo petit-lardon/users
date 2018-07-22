@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../data.service";
-import { Observable } from "rxjs/index";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-users',
@@ -15,7 +15,7 @@ export class UsersComponent implements OnInit {
   ngOnInit() {
     this.data.getUsers().subscribe(
         data => this.users$ = data
-    )
+    );
   }
 
 }
